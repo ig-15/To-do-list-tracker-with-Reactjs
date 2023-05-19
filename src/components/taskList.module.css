@@ -1,0 +1,9 @@
+.tasks {
+    display: grid;
+    list-style-type: none;
+    gap: 1.5em;
+    border-color: blue;
+}
+ul{
+    border-color: none;
+}

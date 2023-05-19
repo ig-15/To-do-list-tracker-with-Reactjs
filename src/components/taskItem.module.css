@@ -1,0 +1,101 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6em;
+    font-size: 16px;
+    border: 2px solid rgba(6, 165, 239, 0.688);
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.task-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.label {
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.checkbox {
+    flex-shrink: 0;
+    appearance: none;
+    border-radius: 8px;
+    width: 1em;
+    height: 1em;
+    background-color: rgba(174, 177, 177, 0.819);
+    box-shadow: 0 0 0.5em rgba(111, 136, 152, 0.986), 0 0 0 0.05em rgba(218, 222, 224, 0.944), 0 0 0 -0.2em rgba(219, 234, 247, 0.794);
+    transition: box-shadow 200ms ease-in-out, background-color 80ms ease-in-out;
+}
+
+.checkbox:focus {
+    outline: none;
+}
+
+.checkbox:focus-visible,
+.checkbox:hover {
+    box-shadow: 0 0 0 rgba(6, 165, 239, 0.688), 0 0 0 0.05em rgba(2, 187, 249, 0.619), 0 0 0 0.225em rgba(5, 172, 228, 0.648);
+}
+
+.checkmark {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    color: rgb(248, 249, 250);
+    border-radius: 8px;
+    transform: translate3d(calc(-100% - 0.5em), -50%, 0);
+    transition: background-color 80ms ease-in-out;
+}
+
+.checkmark svg {
+    width: 1em;
+    height: 1em;
+}
+
+.checkbox:checked {
+    background-color: rgb(7, 134, 198);
+}
+
+.checkbox:checked+label {
+    text-decoration: line-through;
+    color: red;
+}
+.loading {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    font-weight: bold;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+div[id="filter"]{
+display: flex;
+justify-content: center;
+}
+div[id="filter"] button{
+    margin-left: 5%;
+}
+.error {
+    color: rgba(0, 0, 0, 1);
+    font-size: 16px;
+    text-align: center;
+}
